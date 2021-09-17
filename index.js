@@ -66,7 +66,7 @@ const zooAnimals = [
     });
     return displayNames;
   }
-  console.log(animalNames(zooAnimals));
+  
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -74,10 +74,14 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    let lowerCaseNames = [];
+    array.map((item) => {
+      lowerCaseNames.push(item.animal_name.toLowerCase())
+    })
+    return lowerCaseNames;
   }
-  
+  console.log(lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
