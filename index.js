@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-// Functions inside functions can reach outside of itself to access variables, but external functions cannot reach inside functions to access variables. Each function creates a closure that blocks access by other functions outside of itself. The nestedFunction is enclosed inside myFunction, so it has access to myFunction's variables.
+/* Functions inside functions can reach outside of itself to access variables, but external functions cannot reach inside functions to access variables. Each function creates a closure that blocks access by other functions outside of itself. The nestedFunction is enclosed inside myFunction, so it has access to myFunction's variables. */
 
 
 
@@ -59,10 +59,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    let displayNames = [];
+    array.forEach((item) => {
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+    });
+    return displayNames;
   }
-  
+  console.log(animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
