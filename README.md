@@ -25,14 +25,24 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+> .map does some kind of manipulation to each item in an array, and returns the results as a new array. With .map, you can convert all names in an array to uppercase.
+> .reduce adds up all values of a certain type in an array against an accumulator, and returns a single value. Use .reduce to add up the population of cities within a state to find the population of a state.
+> .filter passes elements in an array through a test function. Use .filter to find all cities in an array whose populations are larger than a certain number.
 
 2. Explain the difference between a callback and a higher order function.
+> A Higher Order Function can receive other functions. A Callback is a function that is passed into other functions as an argument.
 
 3. Explain what a closure is.
+> A closure is a function that accesses variables defined in its parent function.
 
 4. Describe the four principles of the 'this' keyword.
+> window binding - if 'this' lacks context, it binds to the window object, the global object, or undefined.
+> implicit binding - in objects with methods, when invoked, this refers to the object to the left of the dot
+> explicit binding - the functions .call, .apply, or .bind will directly tell 'this' what it should refer to. 
+> new binding - when a new object is created using the 'new' keyword, 'this' becomes bound to the newly created object
 
 5. Why do we need super() in an extended class?
+> super() calls the parent class with parameters to be passed into a child class, like the parent.call function. this ensured the parent class is passed into the child class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
